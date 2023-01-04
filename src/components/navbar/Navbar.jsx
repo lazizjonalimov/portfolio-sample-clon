@@ -1,0 +1,33 @@
+import React from 'react'
+import './navbar.css'
+import {AiOutlineHome} from 'react-icons/ai'
+import {AiOutlineUser} from 'react-icons/ai'
+import {BiBook} from 'react-icons/bi'
+import {RiServiceLine} from 'react-icons/ri'
+import {BiMessageSquareDetail} from 'react-icons/bi'
+import { useState } from 'react'
+
+const Navbar = () => {
+  const [activeNav, setActiveNav] = useState("#")
+  return (
+      <nav>
+        <a href="#home" onClick={() => setActiveNav ('#') } className={activeNav === '#' ? 'active' : ''}><AiOutlineHome/></a>
+        <a href="#about" onClick={() => setActiveNav ('#about') } className={activeNav === '#about' ? 'active' : ' '}><AiOutlineUser/></a>
+        <a href="#experience" onClick={() => setActiveNav ('#experience') } className={activeNav === '#experience' ? 'active' : ' '}><BiBook/></a>
+        <a href="#services" onClick={() => setActiveNav ('#services') } className={activeNav === '#services' ? 'active' : ' '}><RiServiceLine/></a>
+        <a href="#contact" onClick={() => setActiveNav ('#contact') } className={activeNav === '#contact' ? 'active' : ' '}><BiMessageSquareDetail/></a>
+      </nav>
+  )
+}
+
+export default Navbar
+
+// Roboto Mono
+// //     /* --e-global-typography-primary-font-family: "Poppins"; */
+// --e-global-typography-primary-font-weight: 600;
+// /* --e-global-typography-secondary-font-family: "Roboto Mono"; */
+// /* --e-global-typography-secondary-font-weight: 400; */
+// /* --e-global-typography-text-font-family: "Roboto Mono"; */
+// --e-global-typography-text-font-weight: 400;
+// /* --e-global-typography-accent-font-family: "Roboto Mono"; */
+// --e-global-typography-accent-font-weight: 500;
